@@ -1,4 +1,4 @@
-FROM php:7.2.14-fpm
+FROM php:7.2.14-fpm-stretch
 
 # Install selected extensions and other stuff
 RUN apt-get update \
