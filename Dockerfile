@@ -32,9 +32,9 @@ RUN docker-php-source extract \
 
 # Installing Phalcon deps
     && cd /usr/local/etc/php/ \
-    && curl -LO https://github.com/phalcon/cphalcon/archive/v${PHALCON_VERSION}.tar.gz \
-    && tar xzf v${PHALCON_VERSION}.tar.gz \
-    && cd cphalcon-${PHALCON_VERSION}/build \
+    && curl -LO https://github.com/phalcon/cphalcon/archive/v4.0.0-alpha1.tar.gz \
+    && tar xzf v4.0.0-alpha1.tar.gz \
+    && cd cphalcon-4.0.0-alpha1/build \
     && sh install \
     && echo "extension=phalcon.so" > /usr/local/etc/php/conf.d/phalcon.ini \
 
