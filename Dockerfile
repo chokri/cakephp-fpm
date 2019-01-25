@@ -17,14 +17,6 @@ RUN docker-php-source extract \
 # Install mysql goodness
     && docker-php-ext-install mysqli pdo_mysql \
 
-# Instaling redis
-    && pecl install redis \
-
-# Installing mongo
-    && pecl install mongo \
-
-# enable pecl modules
-    && docker-php-ext-enable redis mongo \
 
 # Installing CakePHP deps
     && apk add icu-libs icu \
@@ -56,8 +48,8 @@ RUN docker-php-source extract \
     && apk del --purge .build-deps \
     && rm -rf /tmp/pear \
     && rm -rf /var/cache/apk/* \
-    && rm -rf /usr/local/etc/php/cphalcon-${PHALCON_VERSION} \
-    && rm /usr/local/etc/php/v${PHALCON_VERSION}.tar.gz
+    && rm -rf /usr/local/etc/php/cphalcon-4.0.0-alpha1 \
+    && rm /usr/local/etc/php/v4.0.0-alpha1.tar.gz
 
 # Expose new ports
 EXPOSE ${XDEBUG_PORT}
