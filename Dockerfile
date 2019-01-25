@@ -1,4 +1,4 @@
-FROM php:7.3-fpm-alpine
+FROM php:7.2-fpm-alpine
 
 ENV PHALCON_VERSION 3.4.2
 ENV XDEBUG_VERSION 2.6.1
